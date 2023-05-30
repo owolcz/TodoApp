@@ -8,9 +8,8 @@ const Task = (props) => {
             <View style={styles.itemLeft}>
                 <TouchableOpacity style={styles.circle}></TouchableOpacity>
                 <Text style={styles.itemText}>{props.text}</Text>
+                <View style={styles.separator}></View>
             </View>
-            <View style={styles.itemRight}></View>
-            <View style={styles.separator}></View> {/* Horizontal line */}
 
         </View>
     );
@@ -48,7 +47,7 @@ const styles = StyleSheet.create({
         marginTop: 20,
         alignSelf: 'stretch',
         backgroundColor: '#F5F5F5',
-        marginVertical: 8,
+
     },
 });
 
