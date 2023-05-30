@@ -8,8 +8,11 @@ const Task = (props) => {
             <View style={styles.itemLeft}>
                 <TouchableOpacity style={styles.circle}></TouchableOpacity>
                 <Text style={styles.itemText}>{props.text}</Text>
-                <View style={styles.separator}></View>
+                {/* <Text style={styles.itemDate}>Date: {props.date}</Text> */}
             </View>
+
+            <View style={styles.circular}></View>
+
 
         </View>
     );
@@ -17,17 +20,17 @@ const Task = (props) => {
 
 const styles = StyleSheet.create({
     item: {
-        backgroundColor: 'white',
-        padding: 12,
+        backgroundColor: '#FFF',
+        borderRadius: 10,
+        padding: 15,
+        margin: 5,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        marginBottom: 20,
     },
     itemLeft: {
         flexDirection: 'row',
         alignItems: 'center',
-        flexWrap: 'wrap',
     },
     circle: {
         width: 37,
@@ -40,13 +43,25 @@ const styles = StyleSheet.create({
     itemText: {
         maxWidth: '80%',
     },
-    itemRight: {},
+    itemDate: {
+
+
+    },
+
     separator: {
         height: 2,
         width: '100%',
-        marginTop: 20,
+        marginTop: 10,
         alignSelf: 'stretch',
         backgroundColor: '#F5F5F5',
+
+    },
+    circular: {
+        width: 12,
+        height: 12,
+        borderRadius: 6,
+        backgroundColor: '#61DEA4',
+        marginLeft: 'auto',
 
     },
 });

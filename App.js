@@ -24,7 +24,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'grey',
   },
   taskWrapper: {
     paddingTop: 80,
@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 24,
     fontWeight: 'bold',
+    marginBottom: 20,
   },
   items: {},
 });
