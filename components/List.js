@@ -1,0 +1,12 @@
+import React from 'react';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+
+
+const Task = () => {
+    return;
+
+
+};
+
+
+export default List;
