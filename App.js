@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Task from './components/Task';
+import AddButton from './components/AddButton';
 
 export default function App() {
   return (
@@ -17,6 +18,14 @@ export default function App() {
           <Task text={'task 5'} />
         </View>
       </View>
+      <View style={styles.listWrapper}>
+        <Text style={styles.listTitle}>Lists</Text>
+        <View style={styles.items}>
+          {/* This is where the lists will go */}
+          <Task text={'task 5'} />
+        </View>
+      </View>
+      <AddButton />
     </View>
   );
 }
@@ -30,10 +39,23 @@ const styles = StyleSheet.create({
     paddingTop: 80,
     paddingHorizontal: 20,
   },
+  listWrapper: {
+    paddingTop: 40,
+    paddingHorizontal: 20,
+  },
   sectionTitle: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
+  },
+  listTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginLeft: 35,
+    fontStyle: 'normal',
+
+
+
   },
   items: {},
 });
