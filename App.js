@@ -1,7 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View, TextInput } from 'react-native';
 import Task from './components/Task';
 import AddButton from './components/AddButton';
+import { KeyboardAvoidingView } from 'react-native-web';
+
 
 export default function App() {
   return (
@@ -25,7 +27,12 @@ export default function App() {
           <Task text={'task 5'} />
         </View>
       </View>
+
       <AddButton />
+
+      <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : "height"} style={styles.writeTaskWrapper}>
+        <TextInput style={styles.input} placeholder={'Write a task'}></TextInput>
+      </KeyboardAvoidingView>
     </View>
   );
 }
@@ -53,9 +60,24 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginLeft: 35,
     fontStyle: 'normal',
+  },
+  writeTaskWrapper: {
+    position: 'absolute',
+    bottom: 35,
+    left: 20,
+    width: '100%',
+    flexDirection: 'row',
 
-
-
+    alignItems: 'center',
+  },
+  input: {
+    paddingVertical: 15,
+    paddingHorizontal: 15,
+    width: 250,
+    backgroundColor: '#FFF',
+    borderRadius: 60,
+    borderColor: '#C0C0C0',
+    borderWidth: 1,
   },
   items: {},
 });
