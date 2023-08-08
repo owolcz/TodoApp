@@ -18,6 +18,7 @@ export default function App() {
           <Task text={'task 3'} />
           <Task text={'task 4'} />
           <Task text={'task 5'} />
+          <Task text={'task 6'} />
         </View>
       </View>
       <View style={styles.listWrapper}>
